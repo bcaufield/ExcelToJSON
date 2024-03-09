@@ -1,0 +1,4 @@
+https://cscos@dev.azure.com/cscos/ExcelToJSON/_git/ExcelToJSON
+
+user: bcaufield
+pass: anhaxfo22sk3ggcick67k6govhbwuu3e7xybvs4bdswixucrdqyq

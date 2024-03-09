@@ -1,0 +1,12 @@
+Setup Python
+
+cd E:\WebSites\Python\convert_c3d
+
+If everything is set you can just run this:
+E:\WebSites\Python\convert_c3d>C:\Users\bcaufield\AppData\Local\Programs\Python\Python311\python.exe -m venv venv
+E:\WebSites\Python\convert_c3d>C:\Users\bcaufield\AppData\Local\Programs\Python\Python311\python.exe -m flask run
+
+If there are errors you may need to install the dependencies:
+python3 -m pip install xlrd==1.2.0
+python3 -m pip install pandas
+python3 -m pip install flask

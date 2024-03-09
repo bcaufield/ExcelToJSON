@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <title>Excel to JSON Converter</title>
+  <style>
+    body {	
+	    margin:20px;
+	    FONT: 11px “Segoe UI”,”Segoe”,Tahoma,Helvetica,Arial,sans-serif;
+    }
+	  td {
+	    FONT: 11px “Segoe UI”,”Segoe”,Tahoma,Helvetica,Arial,sans-serif;
+ 		  vertical-align:top;
+       width:400px;
+	    text-align:left;
+	  }
+	  th {
+      FONT: 11px “Segoe UI”,”Segoe”,Tahoma,Helvetica,Arial,sans-serif;
+ 		  vertical-align:top;
+	  	width:200px;
+	    text-align:left;
+	  }
+    table {
+      width: 50%;
+      border-collapse: collapse;
+    }
+    table, td {
+      border: 0px solid;
+    }
+    td {
+      padding: 5px;
+    }
+  </style>
+</head>
+<html>
+<body>
+
+<h2>Excel to JSON Converter</h2>
+<h3>Select Standard file and Excel file to convert:</h3>
+<form action="/upload" method="post" enctype="multipart/form-data">
+  <table>
+    <tr>
+      <td>Standard File</td>
+      <td><input type="text" name="standardfile" id="standardfile" value="US_Imperial_base.json"></td>
+    </tr>
+    <tr>
+      <td>Excel File</td>
+      <td><input type="file" name="file" id="file"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" value="Upload File" name="submit"></td>
+    </tr>
+  </table>
+</form>
+
+</body>
+</html>

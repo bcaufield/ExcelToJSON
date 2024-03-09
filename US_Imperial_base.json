@@ -1,0 +1,428 @@
+{
+    "name": "United State Imperial",
+    "version": "1.1.0",
+    "unit": "imperial",
+
+    "comments": {
+        "unit_comments": "for metric, all numbers will be in meters; for imperial, all numbers will be in feet",
+        "parameters_comments": "It's a full list of all parameters",
+        "public_parameters_comments": "A sublist of parameters. These parameters are exposed to external applications",
+        "crossover_settings_comments": "The parameter value specified here will override the default parameter value when create crossover. These values can be customized",
+        "reference_critical_point_comments": "The critical point that is aligned with (0, 0) in the expr file"
+    },
+
+    "parameters": [
+        {
+            "name": "us_heel_spread",
+            "display_name": "Heel Spread",
+            "param_type": "number",
+            "param_unit": "ft",
+            "param_min_value": 0.0,
+            "default_value": 0.52083333
+        },
+        {
+            "name": "us_switch_length",
+            "display_name": "Length of switch points no.2",
+            "param_type": "number",
+            "param_unit": "ft",
+            "param_min_value": 0,
+            "default_value": 1
+        },
+
+        {
+            "name": "us_heel_angle",
+            "display_name": "Heel Angle no.3",
+            "param_type": "number",
+            "param_unit": "",
+            "param_min_value": 0,
+            "default_value": 1
+        },
+        {
+            "name": "us_radius_of_center_line",
+            "display_name": "Radius of Center Line no.9",
+            "param_type": "number",
+            "param_unit": "ft",
+            "param_min_value": 0,
+            "default_value": 1
+        },
+        {
+            "name": "us_frog_angle",
+            "display_name": "Frog Angle no.18",
+            "param_type": "number",
+            "param_unit": "",
+            "param_min_value": 0,
+            "default_value": 1
+        },
+        {
+            "name": "us_toe_distance_d",
+            "display_name": "Toe distance d no.11",
+            "param_type": "number",
+            "param_unit": "ft",
+            "param_min_value": 0,
+            "default_value": 1
+        },
+        {
+            "name": "us_toe_length",
+            "display_name": "Toe Length no.20",
+            "param_type": "number",
+            "param_min_value": 0,
+            "param_unit": "ft",
+            "default_value": 1
+        },
+        {
+            "name": "us_crossover_track",
+            "display_name": "Toe Length no.25",
+            "param_type": "number",
+            "param_unit": "ft",
+            "param_min_value": 0,
+            "default_value": 1
+        },
+
+        {
+            "name": "us_actual_lead",
+            "display_name": "Actual Lead no.6",
+            "param_type": "number",
+            "param_unit": "ft",
+            "param_min_value": 0,
+            "default_value": 1
+        },
+
+        {
+            "name": "us_straight_track",
+            "display_name": "straight track no.24",
+            "param_type": "number",
+            "param_unit": "ft",
+            "param_min_value": 0,
+            "default_value": 1
+        },
+
+        {
+            "name": "us_heel_length",
+            "display_name": "Heel length no.21",
+            "param_type": "number",
+            "param_unit": "ft",
+            "param_min_value": 0,
+            "default_value": 1
+        },
+
+        {
+            "name": "design_speed",
+            "display_name": "Design Speed",
+            "param_type": "number",
+            "param_unit": "mi/h",
+            "param_min_value": 0.0,
+            "param_max_value": 350.0,
+            "default_value": 60.0
+        },
+
+        {
+            "name": "rotation_angle_tan_filter",
+            "display_name": "Angle Tangent",
+            "param_type": "string"
+        },
+
+        {
+            "name": "rotation_angle_tan",
+            "display_name": "Angle Tangent",
+            "param_type": "number",
+            "param_unit": "",
+            "param_min_value": 0.0,
+            "default_value": 0.085
+        },
+        {
+            "name": "exit_curve_radius",
+            "display_name": "Exit Curve Radius",
+            "param_type": "number",
+            "param_unit": "ft",
+            "param_min_value": 0.0,
+            "default_value": 2000.0
+        },
+        {
+            "name": "turnout_extend_length",
+            "display_name": "Extend Length",
+            "param_type": "number",
+            "param_unit": "ft",
+            "param_min_value": 0.0,
+            "default_value": 0.0
+        }
+
+    ],
+
+    "public_parameters": {
+        "filter_parameters": [
+            "rotation_angle_tan_filter"
+        ],
+        "design_speed_parameter": "design_speed"
+    },
+
+    "critical_points": [
+        {
+            "name": "SRJ",
+            "type": "stock_rail_joint"
+        },
+        {
+            "name": "HS",
+            "type": "heel_of_switch"
+        },
+        {
+            "name": "PITO",
+            "type": "point_of_intersection"
+        },
+        {
+            "name": "HF_Main",
+            "type": "heel_of_frog_on_main"
+        },
+        {
+            "name": "HF_Diverted",
+            "type": "heel_of_frog_on_diverted"
+        },
+        {
+            "name": "PS",
+            "type": "point_of_switch"
+        },
+        {
+            "name": "HB",
+            "type": "heel_of_blade"
+        },
+        {
+            "name": "½” PF",
+            "type": "point_of_frog"
+        },
+        {
+            "name": "LLT_Main",
+            "type": "last_long_tie_on_main"
+        },
+        {
+            "name": "ETO_Main",
+            "type": "end_of_turnout_on_main"
+        },
+        {
+            "name": "LLT_Diverted",
+            "type": "last_long_tie_on_diverted"
+        },
+        {
+            "name": "ETO_Diverted",
+            "type": "end_of_turnout_on_diverted"
+        }
+    ],
+
+    "turnout_types": {
+        "single": {
+            "display_name": "US Simple",
+            "parameters": [
+                "us_heel_spread",
+                "us_switch_length",
+                "us_heel_angle",
+                "us_radius_of_center_line",
+                "us_frog_angle",
+                "us_toe_distance_d",
+                "us_toe_length",
+                "us_actual_lead",
+                "us_crossover_track",
+                "us_straight_track",
+                "us_heel_length",
+                "design_speed",
+                "rotation_angle_tan",
+                "exit_curve_radius",
+                "turnout_extend_length"
+            ],
+            "entries": {
+                "default": {
+                    "display_name": "Default",
+                    "is_mergable": true,
+                    "critical_points": [ "HS", "SRJ", "PITO", "HF_Main", "HF_Diverted", "PS", "HB", "LLT_Main", "LLT_Diverted"],
+                    "insertion_points": [ "SRJ", "PITO", "HF_Main", "HF_Diverted" ],
+                    "movable_grip_points": [ "SRJ", "PITO", "HF_Main", "HF_Diverted" ],
+                    "enumerable_grip_points": [
+                        {
+                            "critical_point": "HF_Diverted"
+                        }
+                    ]
+                }
+            },
+            "reference_critical_point": {
+                "entry": "default",
+                "critical_point": "SRJ"
+            },
+            "is_direction_relevant": true,
+            "is_side_relevant": true,
+            "connection_ports": {
+                "default": {
+                    "display_name": "Default",
+                    "entry": "default",
+                    "use_start_point": false,
+                    "direction_from_ref_point": "use_turnout_direction",
+                    "side_to_main_line": "use_turnout_side"
+                }
+            }
+        }
+    },
+
+    "models": [
+        {
+            "name": "Frog No.6",
+            "turnout_type": "single",
+            "parameters": {
+                "us_heel_spread": 0.5208333333333334,
+                "us_switch_length": 13,
+                "us_heel_angle": 2.9,
+                "us_radius_of_center_line": 283.88,
+                "us_frog_angle": 9.527222222222223,
+                "rotation_angle_tan_filter": "0.0218",
+                "rotation_angle_tan": 0.02292,
+                "us_toe_distance_d": -1.4635416666666667,
+                "us_toe_length": 5.375,
+                "us_crossover_track":27.58333333,
+                "us_actual_lead": 49.75,
+                "us_straight_track":26.41666667,
+                "us_heel_length": 7.66666667,
+                "exit_curve_radius": 0.0,
+                "design_speed": 80
+            },
+            "parameter_overrides": {
+                "design_speed": {
+                    "default_value": 80.0
+                }
+            }
+        },
+        {
+            "name": "Frog No.24",
+            "turnout_type": "single",
+            "parameters": {
+                "us_heel_spread": 0.52083333,
+                "us_switch_length": 39,
+                "us_heel_angle": 0.98388889,
+                "us_radius_of_center_line": 5103.26,
+                "us_frog_angle": 2.3869444444444445,
+                "rotation_angle_tan_filter": "0.0318",
+                "rotation_angle_tan": 0.0318,
+                "us_toe_distance_d": -3.4791666666666665,
+                "us_toe_length": 16.75,
+                "us_crossover_track":108.15104166666667,                
+                "us_actual_lead": 177.25,
+                "us_straight_track":107.90104166666667,
+                "us_heel_length": 27.166666666666668,
+                "exit_curve_radius": 0.0,
+                "design_speed": 80
+            },
+            "parameter_overrides": {
+                "design_speed": {
+                    "default_value": 80.0
+                }
+            }
+        }
+    ],
+
+    "crossover_settings": {
+        "default_parameters": {
+            "turnout_extend_length": 0.0
+        },
+        "default_c_revc_exit_curve_radius": "france_calculate_exit_curve_radius(turnout_type, is_left_side, instant_radius, is_cw, exit_curve_radius)"
+    },
+
+    "custom_functions": [
+        {
+            "name": "france_append_turnout_extend_line",
+            "script": [
+                "var ret := -1.0;",
+                "if (extend_length > 1.0e-6 and last_curve_index >= 0.0) {",
+                "   var endPt := func_point_on_cached_curve_at_param(last_curve_index, 1.0);",
+                "   var endPtX := func_coord_from_string(endPt, 0.0);",
+                "   var endPtY := func_coord_from_string(endPt, 1.0);",
+                "",
+                "   var endDir := func_direction_on_cached_curve_at_param(last_curve_index, 1.0);",
+                "   var endDirX := func_coord_from_string(endDir, 0.0);",
+                "   var endDirY := func_coord_from_string(endDir, 1.0);",
+                "",
+                "   ret := func_cache_line_with_startpt_startdir_length(endPtX, endPtY, endDirX, endDirY, extend_length);",
+                "   func_add_cached_curve_to_turnout(ret);",
+                "};",
+                "return [ret];"
+            ],
+            "return_type": "number",
+            "parameters": [
+                {
+                    "name": "last_curve_index",
+                    "param_type": "number"
+                },
+                {
+                    "name": "extend_length",
+                    "param_type": "number"
+                }
+            ]
+        },
+        {
+            "name": "france_prepend_turnout_extend_line",
+            "script": [
+                "var ret := -1.0;",
+                "if (extend_length > 1.0e-6 and first_curve_index >= 0.0) {",
+                "   var startPt := func_point_on_cached_curve_at_param(first_curve_index, 0.0);",
+                "   var startPtX := func_coord_from_string(startPt, 0.0);",
+                "   var startPtY := func_coord_from_string(startPt, 1.0);",
+                "",
+                "   var startDir := func_direction_on_cached_curve_at_param(first_curve_index, 0.0);",
+                "   var startDirX := func_coord_from_string(startDir, 0.0);",
+                "   var startDirY := func_coord_from_string(startDir, 1.0);",
+                "",
+                "   ret := func_cache_line_with_endpt_enddir_length(startPtX, startPtY, startDirX, startDirY, extend_length);",
+                "   func_add_cached_curve_to_turnout(ret);",
+                "};",
+                "return [ret];"
+            ],
+            "return_type": "number",
+            "parameters": [
+                {
+                    "name": "first_curve_index",
+                    "param_type": "number"
+                },
+                {
+                    "name": "extend_length",
+                    "param_type": "number"
+                }
+            ]
+        },
+        {
+            "name": "france_calculate_exit_curve_radius",
+            "script": [
+                "var ret := 2000.0;",
+                "if (turnoutType == 'single' and exitCurveRadiusFromModel > 0.1) {",
+                "   if (func_isfinite(instantRadius) > 0.0) {",
+                "       if ((isLeftSide > 0.0 and isCW < 0.0) or (isLeftSide < 0.0 and isCW > 0.0)) {",
+                "           ret := instantRadius * exitCurveRadiusFromModel / (instantRadius + exitCurveRadiusFromModel);",
+                "       }",
+                "       else {",
+                "           ret := instantRadius * exitCurveRadiusFromModel / abs(instantRadius - exitCurveRadiusFromModel);",
+                "       };",
+                "   }",
+                "   else {",
+                "       ret := exitCurveRadiusFromModel;",
+                "   };",
+                "};",
+                "return [ret];"
+            ],
+            "return_type": "number",
+            "parameters": [
+                {
+                    "name": "turnoutType",
+                    "param_type": "string"
+                },
+                {
+                    "name": "isLeftSide",
+                    "param_type": "number"
+                },
+                {
+                    "name": "instantRadius",
+                    "param_type": "number"
+                },
+                {
+                    "name": "isCW",
+                    "param_type": "number"
+                },
+                {
+                    "name": "exitCurveRadiusFromModel",
+                    "param_type": "number"
+                }
+            ]
+        }
+    ]
+}
